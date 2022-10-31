@@ -36,7 +36,7 @@ public class Menu {
 			//boucle do
 			do {
 				
-				System.out.println("1) Ajouter une Contradiction: ");
+				System.out.println("1) Ajouter une Contradiction! ");
 				System.out.println("2) Fin.");
 				choix=sc.nextInt();
 				
