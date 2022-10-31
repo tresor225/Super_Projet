@@ -13,9 +13,9 @@ public class Debat {
 	// a la creation d'un debat l'ajout d'argument aucun n'argument n'est contredit
 	private ArrayList<Argument>args;
 	private int nbrArg;
-	//la clé est l'argument et sa valeur l'argument qu'il le contredit
+	//la clï¿½ est l'argument et sa valeur l'argument qu'il le contredit
 	private HashMap<Argument, Argument>relation;
-	
+	private ArrayList<Argument> solution;
 	
 	
 	public Debat(int nbrArg) {
@@ -29,7 +29,8 @@ public class Debat {
 			
 		}
 		
-		relation= new HashMap();
+		relation= new HashMap<>();
+		solution= null;
 	}
 	
 	
@@ -49,7 +50,7 @@ public class Debat {
 	
 	
 	
-	//retour l'argument qui a pour id entré en parametre
+	//retour l'argument qui a pour id entrï¿½ en parametre
 	public Argument id_to_arg(String arg1) {
 		
 		Argument arg=null;
@@ -58,7 +59,7 @@ public class Debat {
 				arg=args.get(i);
 			}
 		}
-		
+
 		return arg;
 		
 	}
@@ -121,6 +122,25 @@ public class Debat {
 		 return exist;
 	}
 	
+	public  void ajouterArgument(String arg) {
+		solution.add(id_to_arg(arg));
+	}
+	public  void retirerArgument(String arg) {
+		
+		solution.remove(id_to_arg(arg));
+	}
+	public void verifierSolution() {
+		//boolean solutionAdmissible= true;
+		
+		if(solution.isEmpty()) {
+			//return solutionAdmissible;
+			System.out.print("la solutions est admissible!");
+		}
+		
+		
+		
+		return ;
+	}
 	
 	
 }
