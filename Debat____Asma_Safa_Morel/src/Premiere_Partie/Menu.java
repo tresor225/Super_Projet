@@ -16,7 +16,7 @@ public class Menu {
 		
 		    int nbrArg;
 			
-			System.out.println("Veuillez entrer le nombre d'argument neccessaire: ");
+			System.out.println("Veuillez entrer le nombre d'argument neccessaire!");
 			nbrArg=sc.nextInt();
 		    return nbrArg;
 		
